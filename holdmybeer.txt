@@ -518,4 +518,104 @@ void concatenate_string(char *original, char *add)
    *original = '\0';
 }
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Q25. Write a program to join two given strings without using the strcat() function.
+
+#include <stdio.h>
+
+int main(){
+    char a[50], b[50];
+    printf("Enter the two strings?\n");
+    scanf("%s %s", &a, &b);
+    int i,j;
+    char c[100];
+    for(i = 0; a[i] != '\0'; ++i);
+    for(j = 0; b[j] != '\0'; ++j, ++i){
+        a[i] = b[j];
+    }
+    a[i] = '\0';
+    printf("The combined string is : %s",a);
+}
+
+OUTPUT:
+Enter the two strings?
+hello world
+The combined string is : helloworld
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q26. Determine whether a given inputted string is a palindrome.
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char a[50], b[50];
+    int i, j, k;
+    printf("Enter a string?\t");
+    scanf("%s", &a);
+    strcpy(b,a);
+    strrev(b);
+    if(strcmp(b, a) == 0)
+        printf("The string %s is a palindrome", a);
+    else
+        printf("The string %s is not a palindrome", a);
+}
+
+OUTPUT:
+Enter a string?     hello
+The string hello is not a palindrome
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q27. Write a program to read a string from the user and reverse it.
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char a[50];
+    printf("Enter a string?\t");
+    scanf("%s", &a);
+    strrev(a);
+    printf("The string in reversed order is %s", a);
+}
+
+OUTPUT:
+Enter a string?     snakes
+The string in reversed order is sekans
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Q28. Write a program to count the number of spaces, the number of words, the number of characters in an inputted text.
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char a[200];
+    int i, cspace = 0;
+    printf("Enter a string?\n");
+    gets(a);
+    for(i = 0; a[i] != '\0'; i++){
+        if(a[i] == ' ')
+            cspace++;
+    }
+    printf("The number of spaces in the text is %d\n", cspace);
+    printf("The number of words in the text is %d\n", (cspace+1));
+    printf("The number of characters in the text is %d", i);
+}
+
+OUTPUT:
+Enter a string?
+Tehran is the capital of Iran
+The number of spaces in the text is 5
+The number of words in the text is 6
+The number of characters in the text is 29
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 
