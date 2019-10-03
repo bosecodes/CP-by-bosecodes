@@ -198,10 +198,3 @@ int main()
 	printArray(arr, n); 
 	return 0; 
 } 
-
-
---------------------------------------------------------------------
-Q18. Sort a series of numbers in either ascending order 
-using Selection Sort.
---------------------------------------------------------------------
-
