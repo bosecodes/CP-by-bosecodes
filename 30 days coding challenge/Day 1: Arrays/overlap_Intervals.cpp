@@ -16,6 +16,9 @@ That's the brute force approach: O(nlogn) + O(n2)
 
 */
 
+// Somdev Basu
+// Aur is pal mei, koii nahi h :3
+
 #include <bits/stdc++.h>
 
 using namespace std;
