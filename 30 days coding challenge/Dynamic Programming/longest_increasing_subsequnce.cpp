@@ -26,6 +26,30 @@ int lis(int arr[], int n) {
         }
     }
     return *max_element(dp, dp+n);
+    
+    // Now, to print the LIS itself 
+    int index = 0;
+    int maxi = dp[0];
+    for(int i = n-1; i >=0 ; i--) {
+        if(dp[i] > maxi){
+            maxi = dp[i];
+            index = i;
+        }
+    }
+    
+    vector<int> seq;
+    seq.push_back(arr[index]);
+    for(int i = index - 1; i >= 0; i--) {
+        if(dp[i] + 1 == dp[index] && arr[i] < arr[index]) {
+            index = i;
+            seq.push_back(arr[index]);
+        }
+    }
+    // now reverse the list 
+    reverse(seq.begin(), seq.end());
+    for(auto it: seq) {
+        cout << it << "\t";
+    }
 }
 
 int main() {
@@ -35,5 +59,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-    cout << lis(arr, n);
+    int len = lis(arr, n);
+    cout << len;
+    lis(arr, n);
 }
