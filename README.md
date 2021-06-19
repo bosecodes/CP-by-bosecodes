@@ -1,4 +1,5 @@
-# Programming-Assignment-on-C with the veil of DLang
-A comprehensive list of question and solutions of typical problems that typically form the first step of getting into core programming.
-
-This might form a major part of the first year curriculum of major engineering schools in India.                              
+# Programming Solutions
+A curated list of question and solutions of typical problems from software houses and interviews.
+- LeetCode Problems
+- Striver79 SDE sheet
+- My solutions from over 300+ solved questions on Codechef, Codeforces & Hackerrank
