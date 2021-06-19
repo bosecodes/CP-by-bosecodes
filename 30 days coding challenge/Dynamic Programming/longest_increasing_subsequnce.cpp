@@ -6,7 +6,7 @@
 // Zubi dubi, Zubi dubi, pampara, zubi dubi parampam
 
 
-#include <bits/stdc++.h>
+##include <bits/stdc++.h>
 
 using namespace std;
 
@@ -25,7 +25,7 @@ int lis(int arr[], int n) {
                 dp[i] = 1 + dp[j];  
         }
     }
-    return *max_element(dp, dp+n);
+    
     
     // Now, to print the LIS itself 
     int index = 0;
@@ -50,6 +50,7 @@ int lis(int arr[], int n) {
     for(auto it: seq) {
         cout << it << "\t";
     }
+    return *max_element(dp, dp+n);
 }
 
 int main() {
@@ -60,6 +61,6 @@ int main() {
         cin >> arr[i];
     }
     int len = lis(arr, n);
-    cout << len;
     lis(arr, n);
+    cout << "\n" << len;
 }
