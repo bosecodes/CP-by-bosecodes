@@ -17,6 +17,9 @@ int lis(int arr[], int n) {
     dp[0] = 1;
     for(int i = 1; i < n; i++) {
         dp[i] = 1; 
+        // now for each element, we check subarray uptil that index, to find whether 
+        // there exists an element smaller than the current element, and update the 
+        // maximum length of the subsequence iteratively
         for(int j = 0; j < i; j++) {
             if(arr[i] > arr[j] && dp[i] < dp[j] + 1)
                 dp[i] = 1 + dp[j];  
