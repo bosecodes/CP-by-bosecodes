@@ -26,20 +26,20 @@ import java.io.*;
 
 class Solution {
     public int longestConsecutiveSequence(int nums[]) {
-        Set<Integer> hashset = new HashSet<Integer>();
+        Set<Integer> hashset = new HashSet<Integer>(); // for c++, use set<int> hashset;
         for(int num : nums) {
-            hashset.add(num);
+            hashset.add(num); // hashset.insert(num)
         }
         int longestStreak = 0;
         for(int num : nums) {
-            if(!hashset.contains(n-1)) {
+            if(!hashset.contains(n-1)) { // !hashset.count(n-1)
                 int currentNum = num;
                 int currentStreak = 1;
-                while(hashset.contains(currentNum+1)) {
+                while(hashset.contains(currentNum+1)) { // !hashset.count(currentNum+1)
                     currentNum++;
                     currentStreak++;
                 }
-                longestStreak = Math.max(longestStreak, currentStreak);
+                longestStreak = Math.max(longestStreak, currentStreak); // max 
             }
         }
         return longestStreak;
