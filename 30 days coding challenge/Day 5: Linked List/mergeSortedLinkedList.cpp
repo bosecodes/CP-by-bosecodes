@@ -1,7 +1,7 @@
 // merge two sorted linked lists in sorted order 
 
 // Somdev Basu
-// Ghore te bhromor elo...
+// Bhenge mor ghorer chaabi...
 
 
 
