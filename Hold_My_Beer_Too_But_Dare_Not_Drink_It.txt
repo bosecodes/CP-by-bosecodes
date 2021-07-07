@@ -1,0 +1,200 @@
+--------------------------------------------------------------------
+Q1. Convert a given number of days into months and days.
+--------------------------------------------------------------------
+
+#include<stdio.h> 
+int main()
+{
+	int d, m, rd;
+	printf("Enter no. of days: ");
+	scanf("%d", &d);
+	m=d/30;
+	rd=d%30;
+	printf("%d months and %d days.", m, rd);
+	return 0;
+}
+
+--------------------------------------------------------------------
+Q2. Convert a temperature from Fahrenheit scale to Celsius scale.
+--------------------------------------------------------------------
+
+#include<stdio.h> 
+int main()
+{
+	float f,c;
+	printf("Enter temperature in Fahrenheit: ");
+	scanf("%f", &f);
+	c=5*(f-32)/9;
+	printf("Temperature in Celsius: %f", c);
+	return 0;
+}
+
+--------------------------------------------------------------------
+Q3. Swap two numbers without using third variable.
+--------------------------------------------------------------------
+
+#include<stdio.h>  
+int main()    
+{    
+	int a, b;   
+	printf("Enter a & B: ");
+	scanf("%d %d", &a, &b);   
+	printf("Before swap a=%d b=%d",a,b);      
+	a=a+b;  
+	b=a-b; 
+	a=a-b;
+	printf("\nAfter swap a=%d b=%d",a,b);    
+	return 0;  
+}   
+
+--------------------------------------------------------------------
+Q4. Check whether a year is leap or not.
+--------------------------------------------------------------------
+
+#include<stdio.h>  
+int main()    
+{    
+	int yr;   
+	printf("Enter Year: ");
+	scanf("%d", &yr);     
+	if(yr%100==0)
+	{
+		if(yr%400==0)
+		printf("Leap Year");
+		else
+		printf("Not a Leap Year");
+	}
+	else
+	if(yr%4==0)
+	printf("Leap Year");
+	else
+	printf("Not a Leap Year"); 
+	return 0;  
+} 
+
+--------------------------------------------------------------------
+Q17. Generate the following Pyramid Pattern:
+
+			a 
+			ab 
+			abc 
+			abcd
+--------------------------------------------------------------------
+
+#include<stdio.h>
+int main()    
+{     
+	int c=97, i, j;
+	for(i=1;i<=4;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			printf("%c", (char)c);
+			c++;
+		}
+		c=97;
+		printf("\n");
+	}
+	return 0;  
+} 
+
+--------------------------------------------------------------------
+Q17. Generate the following Pyramid Pattern:
+
+			a 
+			bb 
+			ccc 
+			dddd
+--------------------------------------------------------------------
+
+#include<stdio.h>
+int main()    
+{     
+	int c=97, i, j;
+	for(i=1;i<=4;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			printf("%c", (char)c);
+		}
+		c++;
+		printf("\n");
+	}
+	return 0;  
+} 
+
+--------------------------------------------------------------------
+Q18. Sort a series of numbers in either ascending order 
+using Bubble Sort.
+--------------------------------------------------------------------
+
+#include<stdio.h>
+int main()
+{
+	int n, i, j, t=0;
+	printf("Enter no. of elements: ");
+	scanf("%d", &n);
+	int a[n];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for(i=0;i<n-1;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("%d ", a[i]);
+	}
+}
+
+--------------------------------------------------------------------
+Q18. Sort a series of numbers in either ascending order 
+using Insertion Sort.
+--------------------------------------------------------------------
+
+#include <math.h> 
+#include <stdio.h>
+void insertionSort(int arr[], int n) 
+{ 
+	int i, key, j; 
+	for (i = 1; i < n; i++) { 
+		key = arr[i]; 
+		j = i - 1; 
+		while (j >= 0 && arr[j] > key) { 
+			arr[j + 1] = arr[j]; 
+			j = j - 1; 
+		} 
+		arr[j + 1] = key; 
+	} 
+} 
+void printArray(int arr[], int n) 
+{ 
+	int i; 
+	for (i = 0; i < n; i++) 
+		printf("%d ", arr[i]); 
+	printf("\n"); 
+} 
+int main() 
+{ 
+	int n, i;
+	printf("Enter no. of elements: ");
+	scanf("%d", &n);
+	int arr[n];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	insertionSort(arr, n); 
+	printArray(arr, n); 
+	return 0; 
+} 
