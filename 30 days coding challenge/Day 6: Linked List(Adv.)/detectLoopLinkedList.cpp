@@ -15,15 +15,15 @@ int detectloop(node *head) {
     while(fast != NULL || fast->next != NULL) {
         slow = slow->next;
         fast = fast->next->next;
-        if(low == high) {
-            return 1;
+        if(slow == fast) {
+            return 1; // cycle present 
         }
     }
-    return 0;
+    return 0; // cycle not present
 }
 
 
 
 
 
-
+// Tutorial: https://www.youtube.com/watch?v=Fj1ywT9ETQk
